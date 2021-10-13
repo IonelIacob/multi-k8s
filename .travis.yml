@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project silent-emissary-328913
   - gcloud config set compute/zone europe-west2-a
   - gcloud container clusters get-credentials multi-cluste
-  - echo "$DOCKER_PASSWORD" |docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - dicker built -t ioneliacob/react-gtest -f ./client/Dockerfile.dev ./client/Dockerfile.dev
 
 script:
